@@ -1,0 +1,4 @@
+name: Enemy'sAttackDisabler
+version: @version@
+main: watagame.com.github.enemysattackdisabler.EnemysAttackDisabler
+api-version: 1.12
