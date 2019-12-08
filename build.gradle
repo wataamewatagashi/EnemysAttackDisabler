@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version '2.0.3'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
     id 'java'
 }
 
@@ -36,7 +36,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class" : "app.Main"
+        attributes "Main-Class" : "watagame.com.github.enemysattackdisabler.EnemysAttackDisabler"
     }
 }
 
