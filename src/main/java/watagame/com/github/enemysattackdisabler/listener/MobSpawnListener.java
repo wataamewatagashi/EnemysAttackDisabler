@@ -17,6 +17,6 @@ public class MobSpawnListener implements Listener {
 
     @EventHandler
     public void onMobSpawn(EntitySpawnEvent event) {
-        NBTEditor.set(event.getEntity(), "CanAttack", 0);
+        NBTEditor.set(event.getEntity(), (byte)0, ead.attackable);
     }
 }

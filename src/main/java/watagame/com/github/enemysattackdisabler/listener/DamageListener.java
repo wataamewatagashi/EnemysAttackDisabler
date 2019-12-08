@@ -20,9 +20,10 @@ public class DamageListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onEnemyAttack(EntityDamageByEntityEvent event) {
-        if (event.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK && NBTEditor.getInt(event.getEntity(), "CanAttack") == 0) {
+        if (!(event.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK )) return;
+        if (NBTEditor.getByte(event.getDamager(), ead.attackable) == (byte)0) {
             event.setCancelled(true);
-            //ead.getLogger().info("AttackCancelled!!");
+            ead.getLogger().info("AttackCancelled!!");
         }
     }
 }
