@@ -24,6 +24,9 @@ public class DamageListener implements Listener {
         if (NBTEditor.getByte(event.getDamager(), ead.attackable) == (byte)0) {
             event.setCancelled(true);
             ead.getLogger().info("AttackCancelled!!");
+            NBTEditor.set(event.getDamager(), (byte)1, ead.attackable);
+        } else {
+            NBTEditor.set(event.getDamager(), (byte)0, ead.attackable);
         }
     }
 }
