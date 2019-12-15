@@ -1,5 +1,6 @@
 package watagame.com.github.enemysattackdisabler;
 
+import org.bukkit.NamespacedKey;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import watagame.com.github.enemysattackdisabler.listener.DamageListener;
@@ -8,7 +9,8 @@ import watagame.com.github.enemysattackdisabler.listener.MythicMobsListeners;
 
 public final class EnemysAttackDisabler extends JavaPlugin {
 
-    public String attackable = "Attackable";
+    //public String attackable = "Attackable";
+    final public NamespacedKey attackable = new NamespacedKey(this, "Attackable");
 
     @Override
     public void onEnable() {
