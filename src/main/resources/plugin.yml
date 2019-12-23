@@ -2,7 +2,5 @@ name: EnemysAttackDisabler
 version: @version@
 main: watagame.com.github.enemysattackdisabler.EnemysAttackDisabler
 api-version: 1.13
-depend:
-  - NBTAPI
 softepend:
   - MythicMobs
