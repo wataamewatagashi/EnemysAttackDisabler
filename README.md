@@ -1,7 +1,7 @@
-## 概要  
+# 概要  
 敵MOBの通常攻撃を無効化するSpigotPlugin
 
-##連携要素
+## 連携要素
 - MythicMobs(独自スキルの追加)
 
     | Mechanic | Description |
