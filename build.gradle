@@ -31,10 +31,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compileOnly 'org.spigotmc:spigot:1.14.4-R0.1-SNAPSHOT'
-    compileOnly 'com.github.spotbugs:spotbugs-annotations:4.0.0-beta4'
     compileOnly fileTree(dir: 'libs', include: '*.jar')
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.5'
-    compile group: 'com.mojang',name: 'authlib',version: '1.5.21'
 
 
 }
