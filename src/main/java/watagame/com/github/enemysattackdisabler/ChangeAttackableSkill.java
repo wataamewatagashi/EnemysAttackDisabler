@@ -5,6 +5,7 @@ import io.lumine.xikage.mythicmobs.io.MythicLineConfig;
 import io.lumine.xikage.mythicmobs.skills.ITargetedEntitySkill;
 import io.lumine.xikage.mythicmobs.skills.SkillMechanic;
 import io.lumine.xikage.mythicmobs.skills.SkillMetadata;
+import org.bukkit.NamespacedKey;
 import org.bukkit.persistence.PersistentDataType;
 
 public class ChangeAttackableSkill extends SkillMechanic implements ITargetedEntitySkill {
@@ -26,8 +27,7 @@ public class ChangeAttackableSkill extends SkillMechanic implements ITargetedEnt
             return false;
         }
         Byte ba = attackable? (byte)1:(byte)0;
-        //NBTEditor.set(target.getBukkitEntity(),  ba, ead.attackable);
-        target.getBukkitEntity().getPersistentDataContainer().set(ead.attackable, PersistentDataType.BYTE, ba);
+        target.getBukkitEntity().getPersistentDataContainer().set(new NamespacedKey(ead, "atkb"), PersistentDataType.BYTE, ba);
         ead.getLogger().info("setAttackable! mob:" + target.getBukkitEntity().getType().toString() + "setAttackable" + ba.toString());
         return true;
     }
